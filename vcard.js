@@ -256,7 +256,7 @@ function vCard() {
 
 		/* Ensure at least the needed fields (VERSION, N and FN) exist, needed in all versions. */
 		for (var f = data.length-1; f >= 0; f--){
-			if (data[f].match(/^(VERSION|FN|N):/)) {
+			if (data[f].match(/^(VERSION:|N;|FN;)/)) {
 				required_elements_found++;
 			}
 		}
